@@ -26,7 +26,10 @@ const UploadForm = () => {
   //output class to check and output error if type is not mentioned in the array else input the file name if valid
   return (
     <form>
-      <input type='file' onChange={changeHandler} />
+      <label>
+        <input type='file' onChange={changeHandler} />
+        <span>+</span>
+      </label>
       <div className='output'>
         {error && <div className='error'>{error}</div>}
         {file && <div>{file.name} </div>}
